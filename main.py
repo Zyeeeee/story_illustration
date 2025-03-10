@@ -108,6 +108,46 @@ def main():
                     st.image(redrawn2, caption="Redrawn Image 2", use_container_width=True)
         else:
             st.error("叫你上传两张图不听是吧")
+    st.write("一次一个不够爽？试试下面这个按钮⬇️")
+    # ProMax 模式：一次性跑三个模板
+    if st.button("炼丹promax（现有模板全都跑）"):
+        if image1 and image2:
+            st.write("你是会烧钱的💰👍")
+            st.write("正在生成三个模板...")
+
+            # 生成第一个模板
+            redrawn1 = call_recraft_api(image1, categories["梯田春游🌱"]["prompts"][0], categories["梯田春游🌱"]["controls"][0])
+            redrawn2 = call_recraft_api(image2, categories["梯田春游🌱"]["prompts"][1], categories["梯田春游🌱"]["controls"][1])
+
+            # 生成第二个模板
+            redrawn3 = call_recraft_api(image1, categories["哈尔滨❄️"]["prompts"][0], categories["哈尔滨❄️"]["controls"][0])
+            redrawn4 = call_recraft_api(image2, categories["哈尔滨❄️"]["prompts"][1], categories["哈尔滨❄️"]["controls"][1])
+
+            # 生成第三个模板
+            redrawn5 = call_recraft_api(image1, categories["东京🌸"]["prompts"][0], categories["东京🌸"]["controls"][0])
+            redrawn6 = call_recraft_api(image2, categories["东京🌸"]["prompts"][1], categories["东京🌸"]["controls"][1])
+
+            if redrawn1 and redrawn2 and redrawn3 and redrawn4 and redrawn5 and redrawn6:
+                col1, col2 = st.columns(2)
+                with col1:
+                    st.image(redrawn1, caption="Redrawn Image 1 (梯田春游🌱)", use_container_width=True)
+                with col2:
+                    st.image(redrawn2, caption="Redrawn Image 2 (梯田春游🌱)", use_container_width=True)
+
+                col3, col4 = st.columns(2)
+                with col3:
+                    st.image(redrawn3, caption="Redrawn Image 1 (哈尔滨❄️)", use_container_width=True)
+                with col4:
+                    st.image(redrawn4, caption="Redrawn Image 2 (哈尔滨❄️)", use_container_width=True)
+
+                col5, col6 = st.columns(2)
+                with col5:
+                    st.image(redrawn5, caption="Redrawn Image 1 (东京🌸)", use_container_width=True)
+                with col6:
+                    st.image(redrawn6, caption="Redrawn Image 2 (东京🌸)", use_container_width=True)
+        else:
+            st.error("叫你上传两张图不听是吧")
+
 
 
 if __name__ == "__main__":
