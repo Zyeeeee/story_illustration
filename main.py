@@ -46,7 +46,8 @@ def main():
         "controls":[
             {'background_color': {'rgb': [59, 209, 77]}, 'no_text' : True},
             {'background_color': {'rgb': [59, 209, 77]}, 'no_text' : True}
-        ]
+        ],
+        "description":"两咪春天去在田野边春游，在田野边上见到一个稻草人，小白把自己的帽子戴在稻草人头上，小黑叼了一朵花准备送给稻草人"
         },
         "哈尔滨❄️": {
             "prompts":[
@@ -56,7 +57,8 @@ def main():
         "controls":[
             {'background_color': {'rgb': [255, 255, 255]}, 'no_text' : True},
             {'background_color': {'rgb': [255, 255, 255]}, 'no_text' : True}
-        ]
+        ],
+        "description": "两咪去哈尔滨当小土豆，第一次看到雪很开心，小黑兴冲冲去堆雪人，小白使坏拿雪球砸向堆雪人的小黑，小黑被砸后哈哈大笑，也加入了打雪仗当中 "
         },
         "东京🌸": {
             "prompts": [
@@ -66,13 +68,18 @@ def main():
             "controls": [
                 {'colors':[{'rgb':[177,114,117]},{'rgb':[164,97,99]},{'rgb':[194,137,142]},{'rgb':[204,153,157]},{'rgb':[184,128,132]},{'rgb':[126,170,207]},{'rgb':[220,184,187]},{'rgb':[158,189,220]},{'rgb':[206,169,173]},{'rgb':[102,66,65]}], 'background_color': {'rgb': [126, 172, 212]}, 'no_text': True},
                 {'colors':[{'rgb':[177,114,117]},{'rgb':[164,97,99]},{'rgb':[194,137,142]},{'rgb':[204,153,157]},{'rgb':[184,128,132]},{'rgb':[126,170,207]},{'rgb':[220,184,187]},{'rgb':[158,189,220]},{'rgb':[206,169,173]},{'rgb':[102,66,65]}], 'background_color': {'rgb': [126, 172, 212]}, 'no_text': True}
-            ]
+            ],
+        "description": "两猫趴在电车顶看樱花，小黑突然跃起摇晃树枝，粉色花瓣雨般落在小白猫身上。小白猫气鼓鼓抖毛。"
         }
     }
 
     selected_category = st.selectbox("选一个故事模板", list(categories.keys()))
     prompts = categories[selected_category]["prompts"]
     controls = categories[selected_category]["controls"]
+    description = categories[selected_category]["description"]
+
+    # 显示选中的模板描述
+    st.write(f"模板描述: {description}")
 
     col1, col2 = st.columns(2)
     with col1:
@@ -84,9 +91,9 @@ def main():
         if image1 and image2:
             col1, col2 = st.columns(2)
             with col1:
-                st.image(image1, caption="Original Image 1", use_column_width=True)
+                st.image(image1, caption="Original Image 1", use_container_width=True)
             with col2:
-                st.image(image2, caption="Original Image 2", use_column_width=True)
+                st.image(image2, caption="Original Image 2", use_container_width=True)
 
             st.write("在做了在做了")
 
@@ -96,9 +103,9 @@ def main():
             if redrawn1 and redrawn2:
                 col1, col2 = st.columns(2)
                 with col1:
-                    st.image(redrawn1, caption="Redrawn Image 1", use_column_width=True)
+                    st.image(redrawn1, caption="Redrawn Image 1", use_container_width=True)
                 with col2:
-                    st.image(redrawn2, caption="Redrawn Image 2", use_column_width=True)
+                    st.image(redrawn2, caption="Redrawn Image 2", use_container_width=True)
         else:
             st.error("叫你上传两张图不听是吧")
 
