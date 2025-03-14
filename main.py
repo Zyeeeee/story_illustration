@@ -1,16 +1,15 @@
 import streamlit as st
-import requests
 from io import BytesIO
 from PIL import Image
 from openai import OpenAI
-
+import image_process
 client = OpenAI(
     base_url='https://external.api.recraft.ai/v1',
     api_key='VaF63vGlp9sG59dKUccGx4Gx3XXjKkECM8VriJ2LQV9NdJznH5iQ9h85z8fRybKl',
 )
 
-def call_recraft_api(image_file, prompt, controls):
-    image1 = Image.open(image_file)
+def call_recraft_api(image1, prompt, controls):
+    # image1 = Image.open(image_file)
 
     # 在内存中转换为 PNG 格式
     image1_png = BytesIO()
@@ -70,6 +69,34 @@ def main():
                 {'colors':[{'rgb':[177,114,117]},{'rgb':[164,97,99]},{'rgb':[194,137,142]},{'rgb':[204,153,157]},{'rgb':[184,128,132]},{'rgb':[126,170,207]},{'rgb':[220,184,187]},{'rgb':[158,189,220]},{'rgb':[206,169,173]},{'rgb':[102,66,65]}], 'background_color': {'rgb': [126, 172, 212]}, 'no_text': True}
             ],
         "description": "两猫趴在电车顶看樱花，小黑突然跃起摇晃树枝，粉色花瓣雨般落在小白猫身上。小白猫气鼓鼓抖毛。"
+        },
+        "🆕荷兰郁金香🌷": {
+            "prompts": [
+                "A painting of a hand-painted cute style cat is holding a brush in its hand. Buckets of paint lay on the floor. The cat is standing under a big white windmill tower with some pigments on it.In the background is a spectacular tulip field. Watercolor style.",
+                "A painting of a hand-painted cute style cat trying to catch a bee in the sky. Next to the cat is an overturned paint bucket with the yellow paint spilled all over the floor. The background is a spectacular tulip field. Watercolor style."
+            ],
+            "controls": [
+                {'colors': [{'rgb': [215, 226, 234]}, {'rgb': [183, 208, 222]}, {'rgb': [197, 216, 227]},
+                            {'rgb': [158, 203, 226]}, {'rgb': [244, 38, 36]}, {'rgb': [242, 7, 18]},
+                            {'rgb': [116, 89, 70]}, {'rgb': [248, 82, 59]},{'rgb':[250, 247, 117]}]
+                            , 'background_color': {'rgb': [176, 218, 247]}, 'no_text': True},
+                {'colors': [{'rgb': [215, 226, 234]}, {'rgb': [183, 208, 222]}, {'rgb': [197, 216, 227]},
+                            {'rgb': [158, 203, 226]}, {'rgb': [244, 38, 36]}, {'rgb': [242, 7, 18]},
+                            {'rgb': [116, 89, 70]}, {'rgb': [248, 82, 59]}, {'rgb': [250, 247, 117]}]
+                            , 'background_color': {'rgb': [176, 218, 247]}, 'no_text': True}
+            ],
+            "description": "在郁金香海里，沉稳小黑用尾巴蘸取洒落的颜料在风车上作画，莽撞小白追蜜蜂时撞翻颜料桶。"
+        },
+        "🆕霍比特村里的🐱": {
+            "prompts": [
+                "A painting of a hand-painted cute style cat walking in the Hobbit Village",
+                "A painting of a hand-painted cute style cat holding a cod pie in a hobbit house"
+            ],
+            "controls": [
+                {'no_text': True},
+                {'no_text': True}
+            ],
+            "description": "两只猫咪在霍比特村的绿丘上玩耍，小黑无意间钻进了一个霍比特小屋的窗户里。小白在外面焦急地踱步，结果没多久，小黑叼着一块刚出炉的派探头出来，得意地朝小白晃了晃。小白无奈地叹口气，伸出爪子接住派，心照不宣地一起躲到草丛里享用美食。"
         }
     }
 
@@ -79,21 +106,29 @@ def main():
     description = categories[selected_category]["description"]
 
     # 显示选中的模板描述
-    st.write(f"模板描述: {description}")
+    st.write(f"故事描述: {description}")
 
     col1, col2 = st.columns(2)
     with col1:
-        image1 = st.file_uploader("第一张猫图", type=["png", "jpg"], key="image1")
+        image1 = st.file_uploader("第一张猫图", type=["png", "jpg", "jpeg"], key="image1")
+        if image1 is not None:
+            st.image(image1, caption="原图",use_container_width=True)
+            image = Image.open(image1)
+            image1 = image_process.blur_image(image)
     with col2:
         image2 = st.file_uploader("第二张猫图", type=["png", "jpg"], key="image2")
+        if image2 is not None:
+            st.image(image2, caption="原图",use_container_width=True)
+            image = Image.open(image2)
+            image2 = image_process.blur_image(image)
 
     if st.button("开始炼丹"):
         if image1 and image2:
             col1, col2 = st.columns(2)
             with col1:
-                st.image(image1, caption="Original Image 1", use_container_width=True)
+                st.image(image1, caption="4:3并高斯模糊", use_container_width=True)
             with col2:
-                st.image(image2, caption="Original Image 2", use_container_width=True)
+                st.image(image2, caption="4:3并高斯模糊", use_container_width=True)
 
             st.write("在做了在做了")
 
@@ -108,43 +143,54 @@ def main():
                     st.image(redrawn2, caption="Redrawn Image 2", use_container_width=True)
         else:
             st.error("叫你上传两张图不听是吧")
-    st.write("一次一个不够爽？试试下面这个按钮⬇️")
-    # ProMax 模式：一次性跑三个模板
-    if st.button("炼丹promax（现有模板全都跑）"):
+
+    st.write("想一次生成多个模板？在下面勾选你想要的故事模板 ⬇️")
+
+    # 添加分割线
+    st.markdown("---")
+    st.subheader("多模板生成")
+
+    # 创建每个模板的勾选框
+    selected_templates = {}
+    for category in categories.keys():
+        selected_templates[category] = st.checkbox(f"{category} - {categories[category]['description']}")
+
+    # ProMax 模式：运行用户勾选的模板
+    if st.button("炼丹promax（生成已勾选的模板）"):
         if image1 and image2:
-            st.write("你是会烧钱的💰👍")
-            st.write("正在生成三个模板...")
+            # 检查是否至少选择了一个模板
+            if any(selected_templates.values()):
+                st.write("正在生成选中的模板...")
 
-            # 生成第一个模板
-            redrawn1 = call_recraft_api(image1, categories["梯田春游🌱"]["prompts"][0], categories["梯田春游🌱"]["controls"][0])
-            redrawn2 = call_recraft_api(image2, categories["梯田春游🌱"]["prompts"][1], categories["梯田春游🌱"]["controls"][1])
+                # 逐个处理选中的模板
+                results = {}
+                for category, selected in selected_templates.items():
+                    if selected:
+                        st.write(f"正在生成 {category} 模板...")
 
-            # 生成第二个模板
-            redrawn3 = call_recraft_api(image1, categories["哈尔滨❄️"]["prompts"][0], categories["哈尔滨❄️"]["controls"][0])
-            redrawn4 = call_recraft_api(image2, categories["哈尔滨❄️"]["prompts"][1], categories["哈尔滨❄️"]["controls"][1])
+                        # 获取当前模板的提示和控制参数
+                        template_prompts = categories[category]["prompts"]
+                        template_controls = categories[category]["controls"]
 
-            # 生成第三个模板
-            redrawn5 = call_recraft_api(image1, categories["东京🌸"]["prompts"][0], categories["东京🌸"]["controls"][0])
-            redrawn6 = call_recraft_api(image2, categories["东京🌸"]["prompts"][1], categories["东京🌸"]["controls"][1])
+                        # 调用API生成图片
+                        results[category] = {
+                            "img1": call_recraft_api(image1, template_prompts[0], template_controls[0]),
+                            "img2": call_recraft_api(image2, template_prompts[1], template_controls[1])
+                        }
 
-            if redrawn1 and redrawn2 and redrawn3 and redrawn4 and redrawn5 and redrawn6:
-                col1, col2 = st.columns(2)
-                with col1:
-                    st.image(redrawn1, caption="Redrawn Image 1 (梯田春游🌱)", use_container_width=True)
-                with col2:
-                    st.image(redrawn2, caption="Redrawn Image 2 (梯田春游🌱)", use_container_width=True)
-
-                col3, col4 = st.columns(2)
-                with col3:
-                    st.image(redrawn3, caption="Redrawn Image 1 (哈尔滨❄️)", use_container_width=True)
-                with col4:
-                    st.image(redrawn4, caption="Redrawn Image 2 (哈尔滨❄️)", use_container_width=True)
-
-                col5, col6 = st.columns(2)
-                with col5:
-                    st.image(redrawn5, caption="Redrawn Image 1 (东京🌸)", use_container_width=True)
-                with col6:
-                    st.image(redrawn6, caption="Redrawn Image 2 (东京🌸)", use_container_width=True)
+                # 显示所有生成的图片
+                for category, images in results.items():
+                    st.markdown(f"### {category}")
+                    if images["img1"] and images["img2"]:
+                        col1, col2 = st.columns(2)
+                        with col1:
+                            st.image(images["img1"], caption=f"Redrawn Image 1 ({category})", use_container_width=True)
+                        with col2:
+                            st.image(images["img2"], caption=f"Redrawn Image 2 ({category})", use_container_width=True)
+                    else:
+                        st.error(f"生成 {category} 模板的图片失败")
+            else:
+                st.warning("请至少选择一个模板")
         else:
             st.error("叫你上传两张图不听是吧")
 
