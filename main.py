@@ -126,7 +126,7 @@ def main():
             ],
             "description": "两只小猫去冰雪大世界玩，小白在长滑梯口不敢滑下去，小黑咻地勇敢、开心滑了下去"
         },
-        "洱海海鸥🐦": {
+        "洱海海鸥🐦（待修改）": {
             "prompts": [
                 "A painting of a hand-painted cute style cat attacked a seagull resting on a dead tree beside Erhai Lake",
                 "A painting of a hand-painted cute style cat being chased by a seagull in Erhai"
@@ -136,7 +136,18 @@ def main():
                 {'no_text': True}
             ],
             "description": "在洱海旁边的枯树上偷袭休息的海鸥，被海鸥啄到脑壳"
-        }
+        },
+        "可可西里的🐱（现在效果很一般）": {
+            "prompts": [
+                "A painting of a hand-painted cute style cat sleeping on the grassland under a snowy mountain. There's a herd of antelope grazing in the back",
+                "A painting of a hand-painted cute style cat sleeping on the grassland under a snowy mountain. There's a herd of antelope grazing in the back"
+            ],
+            "controls": [
+                {'no_text': True},
+                {'no_text': True}
+            ],
+            "description": "雪山前的草原上一群羚羊正在悠闲吃草，小黑一个箭步跃羚羊的背上，羚羊温顺地驮着小黑，小黑耳朵被风吹得一抖一抖，眼睛眯成了一条线，享受着这独特的“羚羊快车”。疲惫的小白靠着羚羊在呼呼大睡。"
+        },
     }
 
     selected_category = st.selectbox("选一个故事模板", list(categories.keys()))
