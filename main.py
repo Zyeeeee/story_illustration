@@ -125,6 +125,17 @@ def main():
                 {'background_color': {'rgb': [255, 255, 255]}, 'no_text': True}
             ],
             "description": "两只小猫去冰雪大世界玩，小白在长滑梯口不敢滑下去，小黑咻地勇敢、开心滑了下去"
+        },
+        "洱海海鸥🐦": {
+            "prompts": [
+                "A painting of a hand-painted cute style cat attacked a seagull resting on a dead tree beside Erhai Lake",
+                "A painting of a hand-painted cute style cat being chased by a seagull in Erhai"
+            ],
+            "controls": [
+                {'no_text': True},
+                {'no_text': True}
+            ],
+            "description": "在洱海旁边的枯树上偷袭休息的海鸥，被海鸥啄到脑壳"
         }
     }
 
