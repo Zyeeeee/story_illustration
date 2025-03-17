@@ -70,7 +70,7 @@ def main():
             ],
         "description": "两猫趴在电车顶看樱花，小黑突然跃起摇晃树枝，粉色花瓣雨般落在小白猫身上。小白猫气鼓鼓抖毛。"
         },
-        "🆕荷兰郁金香🌷": {
+        "荷兰郁金香🌷": {
             "prompts": [
                 "A painting of a hand-painted cute style cat is holding a brush in its hand. Buckets of paint lay on the floor. The cat is standing under a big white windmill tower with some pigments on it.In the background is a spectacular tulip field. Watercolor style.",
                 "A painting of a hand-painted cute style cat trying to catch a bee in the sky. Next to the cat is an overturned paint bucket with the yellow paint spilled all over the floor. The background is a spectacular tulip field. Watercolor style."
@@ -87,7 +87,7 @@ def main():
             ],
             "description": "在郁金香海里，沉稳小黑用尾巴蘸取洒落的颜料在风车上作画，莽撞小白追蜜蜂时撞翻颜料桶。"
         },
-        "🆕霍比特村里的🐱": {
+        "霍比特村里的🐱": {
             "prompts": [
                 "A painting of a hand-painted cute style cat walking in the Hobbit Village",
                 "A painting of a hand-painted cute style cat holding a cod pie in a hobbit house"
@@ -97,6 +97,34 @@ def main():
                 {'no_text': True}
             ],
             "description": "两只猫咪在霍比特村的绿丘上玩耍，小黑无意间钻进了一个霍比特小屋的窗户里。小白在外面焦急地踱步，结果没多久，小黑叼着一块刚出炉的派探头出来，得意地朝小白晃了晃。小白无奈地叹口气，伸出爪子接住派，心照不宣地一起躲到草丛里享用美食。"
+        },
+        "九寨沟国家公园💦": {
+            "prompts": [
+                "A painting of a hand-painted cute style cat watching a school of small fish swimming in a lake. The cat is sitting on a rock near a pond, with a natural landscape featuring a calm clear karst lake in the background. There is a reflection of the cat on the water. The background is a crystal clear Karst landform lake. A digital illustration in a watercolor style",
+                "A painting of a hand-painted cute style cat running on the shore of the lake with a fish in its mouth. The cat is walking on a rock near a pond, with a natural landscape featuring a calm clear karst lake in the background. There is a reflection of the cat on the water. The background is a crystal clear Karst landform lake. A digital illustration in a watercolor style"
+            ],
+            "controls": [
+                {'colors': [{'rgb': [83, 189, 160]}, {'rgb': [85, 149, 117]}, {'rgb': [98, 173, 142]},
+                             {'rgb': [46, 120, 116]}, {'rgb': [33, 142, 111]},{'rgb': [87, 201, 233]},
+                            {'rgb': [98, 203, 214]}, {'rgb': [207, 236, 144]}]
+                            , 'background_color': {'rgb': [136, 240, 237]}, 'no_text': True},
+                {'colors': [{'rgb': [83, 189, 160]}, {'rgb': [85, 149, 117]}, {'rgb': [98, 173, 142]},
+                             {'rgb': [46, 120, 116]}, {'rgb': [33, 142, 111]},{'rgb': [87, 201, 233]},
+                            {'rgb': [98, 203, 214]}, {'rgb': [207, 236, 144]}]
+                            , 'background_color': {'rgb': [136, 240, 237]}, 'no_text': True}
+            ],
+            "description": "在清澈碧绿的湖水边，小白正在低头观察湖水中的小鱼，突然听到“扑通”一声，水面溅起了水花。它抬头一看，一只水獭从水里冒了出来，嘴里叼着一条小鱼，眼睛亮晶晶地看着它。一转头，在一枝横在湖面上的枯树上，小黑抢了水獭的鱼，嘴里叼着鱼在狭窄的枯枝上奔跑，水獭在身后气急败坏狂追着小黑；"
+        },
+        "哈尔滨冰雪大世界🛝": {
+            "prompts": [
+                "A painting of a hand-painted cute style cat sliding down a ice slide in Harbin Ice and Snow World. The cat is resting on a sled-like object on a snowy surface. The background consists of a wintry landscape with snow-covered slopes and frost-covered structures inspired by igloos.",
+                "A painting of a hand-painted cute style cat at the entrance of an ice slide looked at the long slide and was afraid to go down. The background consists of a wintry landscape with snow-covered slopes and frost-covered structures inspired by ice castle. "
+            ],
+            "controls": [
+                {'background_color': {'rgb': [255, 255, 255]}, 'no_text': True},
+                {'background_color': {'rgb': [255, 255, 255]}, 'no_text': True}
+            ],
+            "description": "两只小猫去冰雪大世界玩，小白在长滑梯口不敢滑下去，小黑咻地勇敢、开心滑了下去"
         }
     }
 
