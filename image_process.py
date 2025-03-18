@@ -44,7 +44,7 @@ def blur_image(img):
 
 def resize_image(image):
     max_size = 1500
-    min_size = 200
+    min_size = 300
     width, height = image.size
 
     # 计算缩放比例
