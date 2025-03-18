@@ -2,7 +2,6 @@ from PIL import Image,ImageFilter
 import os
 import io
 
-
 def blur_image(img):
 
     # print(img.size)
@@ -40,7 +39,28 @@ def blur_image(img):
     # ---------------------------------------------------------------------------
     # 高斯模糊转化为4:3完成 可以直接返回图像 return background_blurred
     # print(background_blurred.size)
-    return background_blurred
+    image = resize_image(background_blurred)
+    return image
+
+def resize_image(image):
+    max_size = 1500
+    min_size = 200
+    width, height = image.size
+
+    # 计算缩放比例
+    if max(width, height) > max_size:
+        scale = max_size / max(width, height)
+        new_width = int(width * scale)
+        new_height = int(height * scale)
+        image = image.resize((new_width, new_height), Image.Resampling.LANCZOS)
+
+    # 确保最小尺寸不小于 200
+    if min(image.size) < min_size:
+        scale = min_size / min(image.size)
+        new_width = max(int(image.size[0] * scale), min_size)
+        new_height = max(int(image.size[1] * scale), min_size)
+        image = image.resize((new_width, new_height), Image.Resampling.LANCZOS)
+    return image
 
 
 if __name__ == '__main__':

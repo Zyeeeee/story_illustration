@@ -34,7 +34,7 @@ def call_recraft_api(image1, prompt, controls):
 def main():
     st.title("故事插图体体体体验")
     st.write("体验现有的故事插图（现有的意思是我现在做好有的）")
-
+    st.caption("增加了图片大小处理，极大的减少了图片尺寸不正确的错误率，但不是特别完善，不能保证100%处理完全，如果出错请重新上传一张别的图片，我敢保证不是代码的问题✨")
     # 定义栏目和对应的 prompts
     categories = {
         "梯田春游🌱": {
@@ -76,14 +76,8 @@ def main():
                 "A painting of a hand-painted cute style cat trying to catch a bee in the sky. Next to the cat is an overturned paint bucket with the yellow paint spilled all over the floor. The background is a spectacular tulip field. Watercolor style."
             ],
             "controls": [
-                {'colors': [{'rgb': [215, 226, 234]}, {'rgb': [183, 208, 222]}, {'rgb': [197, 216, 227]},
-                            {'rgb': [158, 203, 226]}, {'rgb': [244, 38, 36]}, {'rgb': [242, 7, 18]},
-                            {'rgb': [116, 89, 70]}, {'rgb': [248, 82, 59]},{'rgb':[250, 247, 117]}]
-                            , 'background_color': {'rgb': [176, 218, 247]}, 'no_text': True},
-                {'colors': [{'rgb': [215, 226, 234]}, {'rgb': [183, 208, 222]}, {'rgb': [197, 216, 227]},
-                            {'rgb': [158, 203, 226]}, {'rgb': [244, 38, 36]}, {'rgb': [242, 7, 18]},
-                            {'rgb': [116, 89, 70]}, {'rgb': [248, 82, 59]}, {'rgb': [250, 247, 117]}]
-                            , 'background_color': {'rgb': [176, 218, 247]}, 'no_text': True}
+                {'colors': [{'rgb': [215, 226, 234]}, {'rgb': [183, 208, 222]}, {'rgb': [197, 216, 227]},{'rgb': [158, 203, 226]}, {'rgb': [244, 38, 36]}, {'rgb': [242, 7, 18]},{'rgb': [116, 89, 70]}, {'rgb': [248, 82, 59]},{'rgb':[250, 247, 117]}], 'background_color': {'rgb': [176, 218, 247]}, 'no_text': True},
+                {'colors': [{'rgb': [215, 226, 234]}, {'rgb': [183, 208, 222]}, {'rgb': [197, 216, 227]},{'rgb': [158, 203, 226]}, {'rgb': [244, 38, 36]}, {'rgb': [242, 7, 18]},{'rgb': [116, 89, 70]}, {'rgb': [248, 82, 59]}, {'rgb': [250, 247, 117]}], 'background_color': {'rgb': [176, 218, 247]}, 'no_text': True}
             ],
             "description": "在郁金香海里，沉稳小黑用尾巴蘸取洒落的颜料在风车上作画，莽撞小白追蜜蜂时撞翻颜料桶。"
         },
@@ -104,14 +98,8 @@ def main():
                 "A painting of a hand-painted cute style cat running on the shore of the lake with a fish in its mouth. The cat is walking on a rock near a pond, with a natural landscape featuring a calm clear karst lake in the background. There is a reflection of the cat on the water. The background is a crystal clear Karst landform lake. A digital illustration in a watercolor style"
             ],
             "controls": [
-                {'colors': [{'rgb': [83, 189, 160]}, {'rgb': [85, 149, 117]}, {'rgb': [98, 173, 142]},
-                             {'rgb': [46, 120, 116]}, {'rgb': [33, 142, 111]},{'rgb': [87, 201, 233]},
-                            {'rgb': [98, 203, 214]}, {'rgb': [207, 236, 144]}]
-                            , 'background_color': {'rgb': [136, 240, 237]}, 'no_text': True},
-                {'colors': [{'rgb': [83, 189, 160]}, {'rgb': [85, 149, 117]}, {'rgb': [98, 173, 142]},
-                             {'rgb': [46, 120, 116]}, {'rgb': [33, 142, 111]},{'rgb': [87, 201, 233]},
-                            {'rgb': [98, 203, 214]}, {'rgb': [207, 236, 144]}]
-                            , 'background_color': {'rgb': [136, 240, 237]}, 'no_text': True}
+                {'colors': [{'rgb': [83, 189, 160]}, {'rgb': [85, 149, 117]}, {'rgb': [98, 173, 142]},{'rgb': [46, 120, 116]}, {'rgb': [33, 142, 111]},{'rgb': [87, 201, 233]},{'rgb': [98, 203, 214]}, {'rgb': [207, 236, 144]}], 'background_color': {'rgb': [136, 240, 237]}, 'no_text': True},
+                {'colors': [{'rgb': [83, 189, 160]}, {'rgb': [85, 149, 117]}, {'rgb': [98, 173, 142]},{'rgb': [46, 120, 116]}, {'rgb': [33, 142, 111]},{'rgb': [87, 201, 233]},{'rgb': [98, 203, 214]}, {'rgb': [207, 236, 144]}], 'background_color': {'rgb': [136, 240, 237]}, 'no_text': True}
             ],
             "description": "在清澈碧绿的湖水边，小白正在低头观察湖水中的小鱼，突然听到“扑通”一声，水面溅起了水花。它抬头一看，一只水獭从水里冒了出来，嘴里叼着一条小鱼，眼睛亮晶晶地看着它。一转头，在一枝横在湖面上的枯树上，小黑抢了水獭的鱼，嘴里叼着鱼在狭窄的枯枝上奔跑，水獭在身后气急败坏狂追着小黑；"
         },
