@@ -6,7 +6,7 @@ import image_process
 client = OpenAI(
     base_url='https://external.api.recraft.ai/v1',
     api_key='VaF63vGlp9sG59dKUccGx4Gx3XXjKkECM8VriJ2LQV9NdJznH5iQ9h85z8fRybKl',
-)
+) # 
 
 def call_recraft_api(image1, prompt, controls):
     # image1 = Image.open(image_file)
@@ -95,13 +95,13 @@ def main():
         "九寨沟国家公园💦": {
             "prompts": [
                 "A painting of a hand-painted cute style cat watching a school of small fish swimming in a lake. The cat is sitting on a rock near a pond, with a natural landscape featuring a calm clear karst lake in the background. There is a reflection of the cat on the water. The background is a crystal clear Karst landform lake. A digital illustration in a watercolor style",
-                "A painting of a hand-painted cute style cat running on the shore of the lake with a fish in its mouth. The cat is walking on a rock near a pond, with a natural landscape featuring a calm clear karst lake in the background. There is a reflection of the cat on the water. The background is a crystal clear Karst landform lake. A digital illustration in a watercolor style"
+                "A painting of a hand-painted cute style cat running on the shore of the lake with a fish hold in its mouth. The cat is running on the rocks near a lake, with a natural landscape featuring a calm clear karst lake in the background. There is a reflection of the cat on the water. The background is a crystal clear Karst landform lake. A digital illustration in a watercolor style"
             ],
             "controls": [
                 {'colors': [{'rgb': [83, 189, 160]}, {'rgb': [85, 149, 117]}, {'rgb': [98, 173, 142]},{'rgb': [46, 120, 116]}, {'rgb': [33, 142, 111]},{'rgb': [87, 201, 233]},{'rgb': [98, 203, 214]}, {'rgb': [207, 236, 144]}], 'background_color': {'rgb': [136, 240, 237]}, 'no_text': True},
                 {'colors': [{'rgb': [83, 189, 160]}, {'rgb': [85, 149, 117]}, {'rgb': [98, 173, 142]},{'rgb': [46, 120, 116]}, {'rgb': [33, 142, 111]},{'rgb': [87, 201, 233]},{'rgb': [98, 203, 214]}, {'rgb': [207, 236, 144]}], 'background_color': {'rgb': [136, 240, 237]}, 'no_text': True}
             ],
-            "description": "在清澈碧绿的湖水边，小白正在低头观察湖水中的小鱼，突然听到“扑通”一声，水面溅起了水花。它抬头一看，一只水獭从水里冒了出来，嘴里叼着一条小鱼，眼睛亮晶晶地看着它。一转头，在一枝横在湖面上的枯树上，小黑抢了水獭的鱼，嘴里叼着鱼在狭窄的枯枝上奔跑，水獭在身后气急败坏狂追着小黑；"
+            "description": "在清澈碧绿的湖水边，小白正在低头观察湖水中的小鱼，伸手想把水里的鱼捞起来。一转头，在一枝横在湖面上的枯树上，小黑嘴里叼着鱼在狭窄的枯枝上奔跑，准备和小白分享他的战利品。"
         },
         "哈尔滨冰雪大世界🛝": {
             "prompts": [
@@ -114,28 +114,39 @@ def main():
             ],
             "description": "两只小猫去冰雪大世界玩，小白在长滑梯口不敢滑下去，小黑咻地勇敢、开心滑了下去"
         },
-        "洱海海鸥🐦（待修改）": {
+        "洱海海鸥🐦": {
             "prompts": [
-                "A painting of a hand-painted cute style cat attacked a seagull resting on a dead tree beside Erhai Lake",
-                "A painting of a hand-painted cute style cat being chased by a seagull in Erhai"
+                "A painting of a hand-painted cute style cat attacked a seagull resting on a dead tree beside Erhai Lake. The seagull stood on the dead tree, and the cat held out a paw towards the seagull.In the background, Erhai Lake meets sky and water and some dead trees Illustrations of lovely children's hand-drawn style.",
+                "A painting of a hand-painted cute style cat being chased by a seagull in Erhai. The cat was running and the seagulls were attacking the cat's head.In the background, Erhai Lake meets sky and water and some dead trees. Illustrations of children's hand-drawn style. "
             ],
             "controls": [
-                {'no_text': True},
-                {'no_text': True}
+                {'colors': [{'rgb': [85, 166, 216]}, {'rgb': [105, 177, 219]}, {'rgb': [125, 183, 219]},{'rgb': [79, 109, 137]}, {'rgb': [143, 190, 223]},{'rgb': [96, 125, 151]},{'rgb': [71, 146, 182]}, {'rgb': [113, 137, 159]}, {'rgb': [175, 208, 226]}], 'background_color': {'rgb': [152, 204, 241]}, 'no_text': True},
+                {'colors': [{'rgb': [85, 166, 216]}, {'rgb': [105, 177, 219]}, {'rgb': [125, 183, 219]},{'rgb': [79, 109, 137]}, {'rgb': [143, 190, 223]},{'rgb': [96, 125, 151]},{'rgb': [71, 146, 182]}, {'rgb': [113, 137, 159]}, {'rgb': [175, 208, 226]}], 'background_color': {'rgb': [152, 204, 241]}, 'no_text': True}
             ],
-            "description": "在洱海旁边的枯树上偷袭休息的海鸥，被海鸥啄到脑壳"
+            "description": "小黑看到一只海鸥停在枯树上休息，露出淘气的神情，悄悄爬上树，准备偷袭海鸥。就在它扑过去的一瞬间，海鸥灵巧地飞起，躲过了攻击。而小白正好站在树下看热闹，没想到那只被惊扰的海鸥直接飞下来，对着小白的脑壳“啄”了一下，吓得小白“喵”地一声跳了起来。小黑在树上笑得直打滚，小白气得追着小黑跑：“都怪你！害我被啄了！”"
         },
-        "可可西里的🐱（现在效果很一般）": {
+        "可可西里的🐐和🐱": {
             "prompts": [
-                "A painting of a hand-painted cute style cat sleeping on the grassland under a snowy mountain. There's a herd of antelope grazing in the back",
-                "A painting of a hand-painted cute style cat sleeping on the grassland under a snowy mountain. There's a herd of antelope grazing in the back"
+                "A painting of a hand-painted cute style cat sleeping on the grassland under a snowy mountain. There's a herd of antelope grazing in the back. The snowy mountains of Hoh Xil stretch in the background.Blue sky and white clouds",
+                "A hand-painted cute style digital illustration featuring a cat runs towards a herd of antelopes on the grassland under a snowy mountain. The antelopes are frightened and run away. The snowy mountains of Hoh Xil stretch in the background.Blue sky and white clouds"
+            ],
+            "controls": [
+                {'colors': [{'rgb': [86, 138, 201]}, {'rgb': [174, 176, 202]}, {'rgb': [132, 157, 205]},{'rgb': [154, 165, 202]}, {'rgb': [235, 238, 242]},{'rgb': [112, 146, 200]},{'rgb': [182, 236, 128]}, {'rgb': [255, 255, 255]}], 'no_text': True},
+                {'colors': [{'rgb': [86, 138, 201]}, {'rgb': [174, 176, 202]}, {'rgb': [132, 157, 205]},{'rgb': [154, 165, 202]}, {'rgb': [235, 238, 242]},{'rgb': [112, 146, 200]},{'rgb': [182, 236, 128]}, {'rgb': [255, 255, 255]}], 'no_text': True}
+            ],
+            "description": "雪山前的草原上一群羚羊正在悠闲吃草，小黑一个箭步跃羚羊的背上，羚羊温顺地驮着小黑，小黑耳朵被风吹得一抖一抖，眼睛眯成了一条线，享受着这独特的“羚羊快车”。疲惫的小白靠着羚羊在呼呼大睡。"
+        },
+        "峨眉山的🐒和🐱": {
+            "prompts": [
+                "A hand-painted cute style digital illustration featuring a cat carrying a schoolbag and a monkey on a wooden deck overlooking a mountainous landscape.The cat is running  in the foreground, and the monkey, with a smaller size and a simple green accessory, is positioned slightly behind the cat. The deck has a rustic appearance with wooden planks and a simple railing.  The background consists of lush greenery and a series of mountains  shrouded in clouds fading into the distance. ",
+                "A hand-painted cute style digital illustration featuring a cat throwing stones at a monkey in a tree on Mount Emei. a brown monkey on a tree branch, and a lush, natural environment with greenery and mountains in the background. The cat is sitting on a rock-like formation in the foreground, while the monkey is perched on a tree branch above. The background consists of a range of greenery and rolling hills shrouded in clouds."
             ],
             "controls": [
                 {'no_text': True},
                 {'no_text': True}
             ],
             "description": "雪山前的草原上一群羚羊正在悠闲吃草，小黑一个箭步跃羚羊的背上，羚羊温顺地驮着小黑，小黑耳朵被风吹得一抖一抖，眼睛眯成了一条线，享受着这独特的“羚羊快车”。疲惫的小白靠着羚羊在呼呼大睡。"
-        },
+        }
     }
 
     selected_category = st.selectbox("选一个故事模板", list(categories.keys()))
