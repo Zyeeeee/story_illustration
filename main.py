@@ -6,7 +6,7 @@ import image_process
 client = OpenAI(
     base_url='https://external.api.recraft.ai/v1',
     api_key='VaF63vGlp9sG59dKUccGx4Gx3XXjKkECM8VriJ2LQV9NdJznH5iQ9h85z8fRybKl',
-) # 
+) #
 
 def call_recraft_api(image1, prompt, controls):
     # image1 = Image.open(image_file)
@@ -39,8 +39,8 @@ def main():
     categories = {
         "梯田春游🌱": {
             "prompts":[
-            "A painting of a hand-painted cute style of a cat and a lovely straw-made man. They are standing on a green field. The man is smiling. The cat is reaching out his hand for the man's hat.The background is a terraced fields with some small yellow flowers. ",
-            "A painting of a hand-painted cute style. A cat is carrying a flower in its mouth and walking on green field. The background is a green terraced fields with some small yellow flowers."
+            "A painting of a hand-painted cute style of a kitty and a lovely straw-made man. They are standing on a green field. The man is smiling. The cat is reaching out his hand for the man's hat.The background is a terraced fields with some small yellow flowers. ",
+            "A painting of a hand-painted cute style. A kitty is carrying a flower in its mouth and walking on green field. The background is a green terraced fields with some small yellow flowers."
         ],
         "controls":[
             {'background_color': {'rgb': [59, 209, 77]}, 'no_text' : True},
@@ -50,8 +50,8 @@ def main():
         },
         "哈尔滨❄️": {
             "prompts":[
-            "A painting of a hand-painted cute style cat is being hit by some flying snowballs. The cat is having a snowball fight and was hit with a lot of snow. The background is a snowy scene with a snowman in the snow.Outside.",
-            "A painting of a hand-painted cute style cat is throwing snowballs and having a snowball fight. The cat is in a dynamic motion of throwing some snowballs. Many snowballs lying around. The background is a snowy scene.Outside."
+            "A painting of a hand-painted cute style kitty is being hit by some flying snowballs. The cat is having a snowball fight and was hit with a lot of snow. The background is a snowy scene with a snowman in the snow.Outside.",
+            "A painting of a hand-painted cute style kitty is throwing snowballs and having a snowball fight. The cat is in a dynamic motion of throwing some snowballs. Many snowballs lying around. The background is a snowy scene.Outside."
         ],
         "controls":[
             {'background_color': {'rgb': [255, 255, 255]}, 'no_text' : True},
@@ -72,8 +72,8 @@ def main():
         },
         "荷兰郁金香🌷": {
             "prompts": [
-                "A painting of a hand-painted cute style cat is holding a brush in its hand. Buckets of paint lay on the floor. The cat is standing under a big white windmill tower with some pigments on it.In the background is a spectacular tulip field. Watercolor style.",
-                "A painting of a hand-painted cute style cat trying to catch a bee in the sky. Next to the cat is an overturned paint bucket with the yellow paint spilled all over the floor. The background is a spectacular tulip field. Watercolor style."
+                "A painting of a hand-painted cute style kitty is holding a brush in its hand. Buckets of paint lay on the floor. The cat is standing under a big white windmill tower with some pigments on it.In the background is a spectacular tulip field. Watercolor style.",
+                "A painting of a hand-painted cute style kitty trying to catch a bee in the sky. Next to the cat is an overturned paint bucket with the yellow paint spilled all over the floor. The background is a spectacular tulip field. Watercolor style."
             ],
             "controls": [
                 {'colors': [{'rgb': [215, 226, 234]}, {'rgb': [183, 208, 222]}, {'rgb': [197, 216, 227]},{'rgb': [158, 203, 226]}, {'rgb': [244, 38, 36]}, {'rgb': [242, 7, 18]},{'rgb': [116, 89, 70]}, {'rgb': [248, 82, 59]},{'rgb':[250, 247, 117]}], 'background_color': {'rgb': [176, 218, 247]}, 'no_text': True},
@@ -83,8 +83,8 @@ def main():
         },
         "霍比特村里的🐱": {
             "prompts": [
-                "A painting of a hand-painted cute style cat walking in the Hobbit Village",
-                "A painting of a hand-painted cute style cat holding a cod pie in a hobbit house"
+                "A painting of a hand-painted cute style kitty walking in the Hobbit Village",
+                "A painting of a hand-painted cute style kitty holding a cod pie in a hobbit house"
             ],
             "controls": [
                 {'no_text': True},
@@ -94,8 +94,8 @@ def main():
         },
         "九寨沟国家公园💦": {
             "prompts": [
-                "A painting of a hand-painted cute style cat watching a school of small fish swimming in a lake. The cat is sitting on a rock near a pond, with a natural landscape featuring a calm clear karst lake in the background. There is a reflection of the cat on the water. The background is a crystal clear Karst landform lake. A digital illustration in a watercolor style",
-                "A painting of a hand-painted cute style cat running on the shore of the lake with a fish hold in its mouth. The cat is running on the rocks near a lake, with a natural landscape featuring a calm clear karst lake in the background. There is a reflection of the cat on the water. The background is a crystal clear Karst landform lake. A digital illustration in a watercolor style"
+                "A painting of a hand-painted cute style kitty watching a school of small fish swimming in a lake. The cat is sitting on a rock near a pond, with a natural landscape featuring a calm clear karst lake in the background. There is a reflection of the cat on the water. The background is a crystal clear Karst landform lake. A digital illustration in a watercolor style",
+                "A painting of a hand-painted cute style kitty running on the shore of the lake with a fish hold in its mouth. The cat is running on the rocks near a lake, with a natural landscape featuring a calm clear karst lake in the background. There is a reflection of the cat on the water. The background is a crystal clear Karst landform lake. A digital illustration in a watercolor style"
             ],
             "controls": [
                 {'colors': [{'rgb': [83, 189, 160]}, {'rgb': [85, 149, 117]}, {'rgb': [98, 173, 142]},{'rgb': [46, 120, 116]}, {'rgb': [33, 142, 111]},{'rgb': [87, 201, 233]},{'rgb': [98, 203, 214]}, {'rgb': [207, 236, 144]}], 'background_color': {'rgb': [136, 240, 237]}, 'no_text': True},
@@ -105,8 +105,8 @@ def main():
         },
         "哈尔滨冰雪大世界🛝": {
             "prompts": [
-                "A painting of a hand-painted cute style cat sliding down a ice slide in Harbin Ice and Snow World. The cat is resting on a sled-like object on a snowy surface. The background consists of a wintry landscape with snow-covered slopes and frost-covered structures inspired by igloos.",
-                "A painting of a hand-painted cute style cat at the entrance of an ice slide looked at the long slide and was afraid to go down. The background consists of a wintry landscape with snow-covered slopes and frost-covered structures inspired by ice castle. "
+                "A painting of a hand-painted cute style kitty sliding down a ice slide in Harbin Ice and Snow World. The cat is resting on a sled-like object on a snowy surface. The background consists of a wintry landscape with snow-covered slopes and frost-covered structures inspired by igloos.",
+                "A painting of a hand-painted cute style kitty at the entrance of an ice slide looked at the long slide and was afraid to go down. The background consists of a wintry landscape with snow-covered slopes and frost-covered structures inspired by ice castle. "
             ],
             "controls": [
                 {'background_color': {'rgb': [255, 255, 255]}, 'no_text': True},
@@ -116,8 +116,8 @@ def main():
         },
         "洱海海鸥🐦": {
             "prompts": [
-                "A painting of a hand-painted cute style cat attacked a seagull resting on a dead tree beside Erhai Lake. The seagull stood on the dead tree, and the cat held out a paw towards the seagull.In the background, Erhai Lake meets sky and water and some dead trees Illustrations of lovely children's hand-drawn style.",
-                "A painting of a hand-painted cute style cat being chased by a seagull in Erhai. The cat was running and the seagulls were attacking the cat's head.In the background, Erhai Lake meets sky and water and some dead trees. Illustrations of children's hand-drawn style. "
+                "A painting of a hand-painted cute style kitty attacked a seagull resting on a dead tree beside Erhai Lake. The seagull stood on the dead tree, and the cat held out a paw towards the seagull.In the background, Erhai Lake meets sky and water and some dead trees Illustrations of lovely children's hand-drawn style.",
+                "A painting of a hand-painted cute style kitty being chased by a seagull in Erhai. The cat was running and the seagulls were attacking the cat's head.In the background, Erhai Lake meets sky and water and some dead trees. Illustrations of children's hand-drawn style. "
             ],
             "controls": [
                 {'colors': [{'rgb': [85, 166, 216]}, {'rgb': [105, 177, 219]}, {'rgb': [125, 183, 219]},{'rgb': [79, 109, 137]}, {'rgb': [143, 190, 223]},{'rgb': [96, 125, 151]},{'rgb': [71, 146, 182]}, {'rgb': [113, 137, 159]}, {'rgb': [175, 208, 226]}], 'background_color': {'rgb': [152, 204, 241]}, 'no_text': True},
@@ -127,8 +127,8 @@ def main():
         },
         "可可西里的🐐和🐱": {
             "prompts": [
-                "A painting of a hand-painted cute style cat sleeping on the grassland under a snowy mountain. There's a herd of antelope grazing in the back. The snowy mountains of Hoh Xil stretch in the background.Blue sky and white clouds",
-                "A hand-painted cute style digital illustration featuring a cat runs towards a herd of antelopes on the grassland under a snowy mountain. The antelopes are frightened and run away. The snowy mountains of Hoh Xil stretch in the background.Blue sky and white clouds"
+                "A painting of a hand-painted cute style kitty sleeping on the grassland under a snowy mountain. There's a herd of antelope grazing in the back. The snowy mountains of Hoh Xil stretch in the background.Blue sky and white clouds",
+                "A hand-painted cute style digital illustration featuring a kitty runs towards a herd of antelopes on the grassland under a snowy mountain. The antelopes are frightened and run away. The snowy mountains of Hoh Xil stretch in the background.Blue sky and white clouds"
             ],
             "controls": [
                 {'colors': [{'rgb': [86, 138, 201]}, {'rgb': [174, 176, 202]}, {'rgb': [132, 157, 205]},{'rgb': [154, 165, 202]}, {'rgb': [235, 238, 242]},{'rgb': [112, 146, 200]},{'rgb': [182, 236, 128]}, {'rgb': [255, 255, 255]}], 'no_text': True},
@@ -138,14 +138,25 @@ def main():
         },
         "峨眉山的🐒和🐱": {
             "prompts": [
-                "A hand-painted cute style digital illustration featuring a cat carrying a schoolbag and a monkey on a wooden deck overlooking a mountainous landscape.The cat is running  in the foreground, and the monkey, with a smaller size and a simple green accessory, is positioned slightly behind the cat. The deck has a rustic appearance with wooden planks and a simple railing.  The background consists of lush greenery and a series of mountains  shrouded in clouds fading into the distance. ",
-                "A hand-painted cute style digital illustration featuring a cat throwing stones at a monkey in a tree on Mount Emei. a brown monkey on a tree branch, and a lush, natural environment with greenery and mountains in the background. The cat is sitting on a rock-like formation in the foreground, while the monkey is perched on a tree branch above. The background consists of a range of greenery and rolling hills shrouded in clouds."
+                "A hand-painted cute style digital illustration featuring a kitty carrying a schoolbag and a monkey on a wooden deck overlooking a mountainous landscape.The cat is running  in the foreground, and the monkey, with a smaller size and a simple green accessory, is positioned slightly behind the cat. The deck has a rustic appearance with wooden planks and a simple railing.  The background consists of lush greenery and a series of mountains  shrouded in clouds fading into the distance. ",
+                "A hand-painted cute style digital illustration featuring a kitty throwing stones at a monkey in a tree on Mount Emei. a brown monkey on a tree branch, and a lush, natural environment with greenery and mountains in the background. The cat is sitting on a rock-like formation in the foreground, while the monkey is perched on a tree branch above. The background consists of a range of greenery and rolling hills shrouded in clouds."
             ],
             "controls": [
                 {'no_text': True},
                 {'no_text': True}
             ],
             "description": "雪山前的草原上一群羚羊正在悠闲吃草，小黑一个箭步跃羚羊的背上，羚羊温顺地驮着小黑，小黑耳朵被风吹得一抖一抖，眼睛眯成了一条线，享受着这独特的“羚羊快车”。疲惫的小白靠着羚羊在呼呼大睡。"
+        },
+        "乌镇🛶": {
+            "prompts": [
+                "A painting of hand-painted cute style featuring a kitty catching a swimming duck in a traditional water town in Jiangnan, China, capturing a peaceful canal flanked by ancient wooden buildings with classic Jiangnan architectural style. ",
+                "A painting of hand-painted cute style featuring a kitty boating on a black-roofed wooden boat in a traditional water town in Jiangnan, China, capturing a peaceful canal flanked by ancient wooden buildings with classic Jiangnan architectural style. "
+            ],
+            "controls": [
+                {'colors': [{'rgb': [48, 132, 98]}, {'rgb': [217, 230, 240]}, {'rgb': [77, 94, 88]},{'rgb': [108, 103, 103]}, {'rgb': [234, 242, 248]},{'rgb': [171, 173, 177]},{'rgb': [65, 149, 117]}, {'rgb': [151, 95, 58]}, {'rgb': [121, 206, 195]}], 'background_color': {'rgb': [178, 204, 240]}, 'no_text': True},
+                {'colors': [{'rgb': [48, 132, 98]}, {'rgb': [217, 230, 240]}, {'rgb': [77, 94, 88]},{'rgb': [108, 103, 103]}, {'rgb': [234, 242, 248]},{'rgb': [171, 173, 177]},{'rgb': [65, 149, 117]}, {'rgb': [151, 95, 58]}, {'rgb': [121, 206, 195]}], 'background_color': {'rgb': [178, 204, 240]}, 'no_text': True}
+            ],
+            "description": "两只猫咪小黑和小白来到乌镇古村落，古色古香的建筑和小桥流水让它们兴奋不已。小黑看到一只鸭子在河边悠闲地游着，忍不住伸出爪子去“捞”，结果鸭子扑腾着水花，溅了小黑一脸水，小黑气得直跺脚。小白看到旁边有个竹排，边撑着竹排到小黑身边，把落水的小黑救了上竹排，两猫乘着竹排一起欣赏乌镇沿河的美丽春光。"
         }
     }
 

@@ -20,7 +20,7 @@ def blur_image(img):
     background = img.resize((target_width, target_height))
 
     # 对背景应用高斯模糊
-    background_blurred = background.filter(ImageFilter.GaussianBlur(25))  # 模糊半径可调整
+    background_blurred = background.filter(ImageFilter.GaussianBlur(50))  # 模糊半径可调整
 
     # 计算原图的等比例缩放后的尺寸
     scale_factor = min(target_width / width, target_height / height)
