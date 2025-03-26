@@ -157,6 +157,61 @@ def main():
                 {'colors': [{'rgb': [48, 132, 98]}, {'rgb': [217, 230, 240]}, {'rgb': [77, 94, 88]},{'rgb': [108, 103, 103]}, {'rgb': [234, 242, 248]},{'rgb': [171, 173, 177]},{'rgb': [65, 149, 117]}, {'rgb': [151, 95, 58]}, {'rgb': [121, 206, 195]}], 'background_color': {'rgb': [178, 204, 240]}, 'no_text': True}
             ],
             "description": "两只猫咪小黑和小白来到乌镇古村落，古色古香的建筑和小桥流水让它们兴奋不已。小黑看到一只鸭子在河边悠闲地游着，忍不住伸出爪子去“捞”，结果鸭子扑腾着水花，溅了小黑一脸水，小黑气得直跺脚。小白看到旁边有个竹排，边撑着竹排到小黑身边，把落水的小黑救了上竹排，两猫乘着竹排一起欣赏乌镇沿河的美丽春光。"
+        },
+        "三亚冲浪🏄": {
+            "prompts": [
+                "A painting of hand-painted cute style featuring a cat surfing in the sea. Blue sky and white clouds",
+                "A painting of hand-painted cute style featuring a cat swimming in the sea holding a life buoy. Blue sky and white clouds"
+            ],
+            "controls": [
+                {'background_color': {'rgb': [110, 236, 250]}, 'no_text': True},
+                {'background_color': {'rgb': [110, 236, 250]}, 'no_text': True}
+            ],
+            "description": "阳光明媚的三亚海滩上，两只小猫小黑和小白兴奋地尝试冲浪。小黑天生胆大，跳上冲浪板，随着海浪摇摇晃晃地向前冲，耳朵被海风吹得直抖，嘴里兴奋地“喵喵”叫着。然而，一个大浪打来，小白没站稳，“扑通”一声掉进了水里，湿漉漉地在海里游着"
+        },
+        "厦门沙滩🏖️": {
+            "prompts": [
+                "A painting of hand-painted cute style featuring a cat buried in the sand on the beach by the sea, with only its head showing",
+                "A painting of hand-painted cute style featuring a cat shoveling sand with a shovel on the beach by the sea"
+            ],
+            "controls": [
+                {'colors': [{'rgb': [240, 211, 88]}],'background_color': {'rgb': [110, 236, 250]}, 'no_text': True},
+                {'colors': [{'rgb': [240, 211, 88]}],'background_color': {'rgb': [110, 236, 250]}, 'no_text': True}
+            ],
+            "description": "阳光灿烂的沙滩上，两只猫咪小黑和小白正开心地玩耍。小黑懒洋洋地躺下，结果小白一铲一铲地把它埋了起来，只剩一个毛茸茸的猫头露在外面。小黑眯着眼享受着阳光，却突然被飞来的螃蟹夹子吓得“喵喵”直叫，逗得小白哈哈大笑。"
+        },
+        "霍格沃滋🪄": {
+            "prompts": [
+                "A painting of hand-painted cute style featuring a cat eats a magical pumpkin pie in the Hogwarts kitchen next to a floating candlestick",
+                "A painting of hand-painted cute style featuring a cat wearing a magic hat and riding a magic broom flies through the air "
+            ],
+            "controls": [
+                {'no_text': True},
+                {'no_text': True}
+            ],
+            "description": "小黑误食了霍格沃茨厨房的魔法南瓜派，瞬间变成了一只会飞的猫，四处捣乱，小白带着着魔法帽子，骑着魔法扫帚去拯救乱飞的小黑。"
+        },
+        "沉睡魔咒💤": {
+            "prompts": [
+                "A painting of hand-painted cute style featuring a cat wearing a Maleficent wig walks through a dark forest of Mistress of Evil",
+                "A painting of hand-painted cute style featuring a cat gets entangled in a vine in the dark forest of Maleficent. There are several vines on the cat's body, and the cat is trying to free itself."
+            ],
+            "controls": [
+                {'no_text': True},
+                {'no_text': True}
+            ],
+            "description": "小黑误食了霍格沃茨厨房的魔法南瓜派，瞬间变成了一只会飞的猫，四处捣乱，小白带着着魔法帽子，骑着魔法扫帚去拯救乱飞的小黑。"
+        },
+        "埃及🕌": {
+            "prompts": [
+                "A digital illustration painting of hand-painted cute style featuring a cat sits in the back seat of a Tuk Tuk car with a busy Egyptian street in the background",
+                "A digital illustration painting of hand-painted cute style featuring a cat walks on the road inside the Sultan Hassan Mosque"
+            ],
+            "controls": [
+                {'no_text': True},
+                {'no_text': True}
+            ],
+            "description": "两只猫跳上埃及街头一辆五彩斑斓的突突车，突突车在热闹的街道上飞驰，风吹乱了它们的毛，他们享受这新奇的体验。车子经过香料市场时小白帮小黑拍了一张坐在突突车上的照片，经过古老的清真寺时小黑帮小白拍了张背景是古老清真寺的照片。"
         }
     }
 
