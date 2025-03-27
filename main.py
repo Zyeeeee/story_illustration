@@ -212,6 +212,28 @@ def main():
                 {'no_text': True}
             ],
             "description": "两只猫跳上埃及街头一辆五彩斑斓的突突车，突突车在热闹的街道上飞驰，风吹乱了它们的毛，他们享受这新奇的体验。车子经过香料市场时小白帮小黑拍了一张坐在突突车上的照片，经过古老的清真寺时小黑帮小白拍了张背景是古老清真寺的照片。"
+        },
+        "神庙探险🔥": {
+            "prompts": [
+                "A painting of hand-painted cute style featuring a cat in an adventure hat running down a dark stone corridor with torches on the walls",
+                "A painting of hand-painted cute style featuring a cat in an adventure hat looks around a stone pillar carved with ancient symbols in a darkened stone room with torches on the walls"
+            ],
+            "controls": [
+                {'no_text': True},
+                {'no_text': True}
+            ],
+            "description": "两只猫咪带着探险帽子，拿着探险仗进入埃及神庙内探险，小黑跳上雕刻着古老符号的石柱，东张西望，突然触发了某个机关！地板开始震动，墙壁缓缓移动，沙子从天花板上洒落，仿佛整个神庙在苏醒。小白吓得开始飞快地奔跑，灵活地穿过狭窄的通道，躲避突然掉落的石块和从墙壁喷出的沙尘。"
+        },
+        "油菜花": {
+            "prompts": [
+                "A painting of hand-painted cute style featuring a cat moves through a lush field of rapeseed flowers. In the background are patches of rapeseed flowers and fluttering butterflies. Blue sky and white clouds",
+                "A children's illustration storybook-style watercolor painting of a cute kitten lay basking in the sun in the middle of a dense field of rapeseed flowers. In the background are patches of rapeseed flowers and fluttering butterflies. Blue sky and white clouds"
+            ],
+            "controls": [
+                {'no_text': True},
+                {'no_text': True}
+            ],
+            "description": "小黑看到满地的花朵，兴奋地在花丛中钻来钻去，时不时跳起来扑向飞舞的蝴蝶，却总是扑空，惹得蝴蝶在它头顶飞舞，像是在嘲笑它。小白则悠闲地躺在花丛里晒太阳，懒洋洋地伸着爪子，偶尔拍一下飞过来的蜜蜂。"
         }
     }
 
