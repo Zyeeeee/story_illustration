@@ -234,6 +234,28 @@ def main():
                 {'no_text': True}
             ],
             "description": "小黑看到满地的花朵，兴奋地在花丛中钻来钻去，时不时跳起来扑向飞舞的蝴蝶，却总是扑空，惹得蝴蝶在它头顶飞舞，像是在嘲笑它。小白则悠闲地躺在花丛里晒太阳，懒洋洋地伸着爪子，偶尔拍一下飞过来的蜜蜂。"
+        },
+        "塞上江南": {
+            "prompts": [
+                "A painting of hand-painted cute style featuring a cat was running among a dense patch of reeds, , with a beautiful view of China's Ningxia Plain in the background",
+                "A painting of hand-painted cute style featuring a cat tries to catch a flying waterbird in a dense field of reeds, with a beautiful view of China's Ningxia Plain in the background"
+            ],
+            "controls": [
+                {'no_text': True},
+                {'no_text': True}
+            ],
+            "description": "两只猫咪小黑和小白来到塞上江南，广阔的绿洲和蜿蜒的河流让它们兴奋不已。小黑看到河边的芦苇荡，忍不住钻进去玩，结果被一群飞起的水鸟吓得“喵”一声跳了起来，摔了个四脚朝天。小白在一旁试图抓住飞起来的水鸟。"
+        },
+        "沙滩沙堡": {
+            "prompts": [
+                "A painting of hand-painted cute style featuring a cat building a sandcastle on the beach. The sand is speckled with various seashells and small rocks.",
+                "A painting of hand-painted cute style featuring a cat running on the beach. The sand is speckled with various seashells and small rocks."
+            ],
+            "controls": [
+                {'no_text': True},
+                {'no_text': True}
+            ],
+            "description": "小白开始认真地堆沙堡。它用小爪子拍得整整齐齐，还插上了一片贝壳“旗帜”。小黑挣脱出来后，一屁股坐在沙堡上，直接把它压塌了。小白气得追着小黑跑，两个小家伙在沙滩上闹成一团，留下了一串串小脚印和欢快的笑声。"
         }
     }
 
